@@ -1,0 +1,41 @@
+import UIKit
+
+var str = "Rack-O Clone"
+
+var deck = Array(stride(from:1, to: 61, by: 1))
+print("New Deck: \(deck)")
+deck.shuffle()
+print("Shuffled Deck: \(deck)")
+
+//Deal
+var hand0 = Array<Int>()
+var hand1 = Array<Int>()
+var hand2 = Array<Int>()
+var hand3 = Array<Int>()
+var discard = Array<Int>()
+var counterDeal = 1
+while counterDeal <= 10 {
+    hand0.append(deck.remove(at: 0))
+    hand1.append(deck.remove(at: 0))
+    hand2.append(deck.remove(at: 0))
+    hand3.append(deck.remove(at: 0))
+    counterDeal += 1
+}
+discard.append(deck.remove(at: 0))
+
+//Print Hands
+print("Hand0: \(hand0)")
+print("Hand1: \(hand1)")
+print("Hand2: \(hand2)")
+print("Hand3: \(hand3)")
+print("Discard: \(discard)")
+print("Remaining Deck: \(deck)")
+
+//Draw from deck or discard pile
+
+
+//Select position
+
+//Replace
+
+//Discard
